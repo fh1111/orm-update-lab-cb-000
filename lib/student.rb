@@ -52,4 +52,12 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
 
+  def new_from_db(row)
+    id = row[0]
+    name = row[1]
+    grade = [2]
+    self.new(id, name, grade)
+
+  end
+
 end
