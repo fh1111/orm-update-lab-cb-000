@@ -61,6 +61,7 @@ class Student
   def self.create(name, grade)
     student = self.new(name,grade)
     student.save
+    student
   end
 
   def self.find_by_name(name)
