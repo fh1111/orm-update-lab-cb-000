@@ -57,6 +57,11 @@ class Student
     name = row[1]
     grade = [2]
     self.new(id, name, grade)
+  end
+
+  def self.create(name, grade)
+    student = self.new(name,grade)
+    student.save
 
   end
 
